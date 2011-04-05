@@ -24,9 +24,16 @@
 
   <build>
     <directory>${targetDir}</directory>
+	 <sourceDirectory>src</sourceDirectory>
+
+	 <resources>
+      <resource>
+        <directory>dist/native</directory>	
+      </resource>
+    </resources>
     <plugins>
       <!-- fake out maven and install the binary artifact -->
-      
+              
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
